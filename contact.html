@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Hut Form</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.2.js"></script>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<?php
+//comment needed
+  if (isset($_POST['email']))  {
+  
+  //comment needed
+  $admin_email = "1dhawinkels@tawacollege.school.nz";
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $comment = $_POST['comment'];
+  $body = "Comment: ".$comment;
+  
+  //comment needed
+  mail($admin_email, "$subject", $body,$email);
+  
+  //comment needed
+  echo "Thank you for contacting us!";
+  }
+  
+  //comment needed
+  else  {
+?>
+
+ <form method="post">
+  Email: <input name="email" type="text" /><br />
+  Subject: <input name="subject" type="text" /><br />
+  Extra: <input name="extra" type="text" /><br />
+  Message:<br />
+  <textarea name="comment" rows="15" cols="40"></textarea><br />
+  <input type="submit" value="Submit" />
+  </form>
+  
+<?php
+  }
+?>
+<br>
+<div class="row">
+		<a href="http://www.pizzahut.co.nz/" class="pure-button pure-button-primary">Home</a>
+		<!--
+		links to the Pizza hut site. I will make it so that the user can see their order in the future
+		-->
+		</div>
+       
+      </div>
+<div class="row">
+		<a href="index.html" class="pure-button pure-button-primary">Order</a>
+		<!--
+		links to the Pizza hut site. I will make it so that the user can see their order in the future
+		-->
+		</div>
+       
+      </div>
+</body>
+</html>
