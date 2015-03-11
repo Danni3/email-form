@@ -19,7 +19,7 @@ $subject = stripslashes($_POST['subject']);
 $message = stripslashes($_POST['message']);
 
 
-$vals = array('name' => $name, 'email' => $email, 'subject' => $subject, 'message' => $message, 'email' => $name,$email,$subject,$message );
+$vals = array('name' => $name, 'email' => $email, 'subject' => $subject, 'message' => $message, 'email' => $name . "<br />" . $email . "<br />" . $subject . "<br />" . $message );
 
 // var_dump($vals);
 
